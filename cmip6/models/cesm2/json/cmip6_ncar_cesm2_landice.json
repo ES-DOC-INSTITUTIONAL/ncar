@@ -1,0 +1,182 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "ncar", 
+    "seedingSource": null, 
+    "sourceID": "cesm2", 
+    "topic": "landice", 
+    "content": {
+        "cmip6.landice.key_properties.name": {
+            "values": [
+                "Community Ice Sheet Model version 2.1 (CISM2.1)"
+            ]
+        }, 
+        "cmip6.landice.key_properties.keywords": {
+            "values": [
+                "ice sheet, surface mass balance, iceberg calving, basal sliding, grounding line, ice dynamics, Stokes approximation, glacier hydrology"
+            ]
+        }, 
+        "cmip6.landice.key_properties.overview": {
+            "values": [
+                "The land ice component of CESM2 consists of two parts:\n- the ice sheet dynamics model, known as the Community Ice Sheet Model (CISM) v2.1.\n- the land ice surface mass balance (SMB) component, which is part of the Community Land Model (CLM).\nCESM2 can be run either with or without an interactive Greenland ice sheet.  For CMIP6, an interactive Antarctic ice sheet is not supported.  Most CMIP6 simulations are run without an interactive ice sheet.\n\nIn non-interactive simulations, the ice sheet does not evolve, but CLM still computes ice sheet SMB.  The SMB is computed for the glaciated fraction of CLM grid cells in multiple elevation classes (aka \u201cglacier columns\u201d) in Greenland and Antarctica (see section 4.2.1.1).  (CLM also computes and sends the temperature of the top ice layer.  When we refer to SMB calculations, it is understood that this temperature is included as well.)  For Greenland, the SMB in each glacier column is passed from CLM to CISM via the coupler and is downscaled to the CISM grid.  For Antarctica, CLM also computes an SMB in glacier columns, but there is no Antarctic grid for downscaling.  For glaciers and ice caps outside the Greenland and Antarctic ice sheets, CLM computes the SMB in a single glacier column per gridcell.  Thus, in CESM runs without an interactive ice sheet, CISM\u2019s main role is to serve as a downscaling target for Greenland SMB.\n\nFor coupled climate \u2013 ice sheet experiments (e.g., the \u201cwithism\u201d simulations for ISMIP6), CESM2 is run with an interactive Greenland ice sheet. In this case the SMB is computed by CLM in multiple glacier columns, is downscaled to the CISM grid, and serves as an upper boundary condition for an active ice sheet.  CISM solves equations for ice sheet velocity and the evolution of ice thickness and temperature over a coupling interval.  (See section 4 for details.)  CISM then sends the new ice sheet extent and thickness to CLM via the coupler.  In CLM the fractional area and elevation in each glacier column are modified accordingly, with adjustments for conservation of water and energy.  In this way the SMB and ice sheet dynamics evolve consistently.\n\nWhen referring below to the \u201cland ice model\u201d, we will try to make clear whether we are referring to CISM, or the SMB component in CLM, or the combination.\n"
+            ]
+        }, 
+        "cmip6.landice.key_properties.ice_albedo": {
+            "values": [
+                "Other: document in cell to the right"
+            ]
+        }, 
+        "cmip6.landice.key_properties.atmospheric_coupling_variables": {
+            "values": [
+                "surface mass balance, surface temperature, ice area, surface height"
+            ]
+        }, 
+        "cmip6.landice.key_properties.oceanic_coupling_variables": {
+            "values": [
+                "ice runoff, liquid runoff"
+            ]
+        }, 
+        "cmip6.landice.key_properties.prognostic_variables": {
+            "values": [
+                "Other: document in cell to the right", 
+                "Ice thickness", 
+                "Ice temperature", 
+                "Ice velocity"
+            ]
+        }, 
+        "cmip6.landice.key_properties.software_properties.repository": {
+            "values": [
+                "https://github.com/escomp/cism"
+            ]
+        }, 
+        "cmip6.landice.key_properties.software_properties.code_version": {
+            "values": [
+                "CISM v2.1"
+            ]
+        }, 
+        "cmip6.landice.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran 90, Python"
+            ]
+        }, 
+        "cmip6.landice.key_properties.tuning_applied.description": {
+            "values": [
+                "In simulations without interactive ice sheets, the ice sheet extent and thickness are held fixed at observed modern values.  In simulations with an interactive Greenland ice sheet, the ice sheet evolves in tandem with the AOGCM and is unconstrained by observed ice thickness or velocity.  \nIn particular, CISM does not invert for basal friction parameters to match observed thickness or velocity.  Thus, the ice thickness and extent at the end of the coupled spin-up (which serves as the initial condition for \u201cwithism\u201d simulations) can differ significantly from observed values.  \n\nSome CISM parameters, however, are not well constrained by observations, and were tuned in standalone spin-up experiments to make the ice thickness and geometry as realistic as possible.  In  interactive \u201cwithism\u201d simulations, CISM uses a pseudo-plastic basal sliding scheme (Aschwanden et al. 2013) with several tunable parameters.  We generally followed parameter choices from Aschwanden et al. (2016), with minor adjustments to reduce ice thickness and velocity biases.  We settled on q = 0.5, u_0 = 100 m/y, phi_min = 40 degrees, phi_max = 5 degrees, bed_min = -300 m, and bed_max = 700 m.  Parameter choices for the local basal till model follow Bueler and van Pelt (2015).\n\nWe also adjusted several parameters to make the simulations more robust.  Surface gradients ds/dx and ds/dy in the gravitational driving stress are limited to a magnitude of 0.10 to prevent unrealistically large ice speeds in coastal regions with steep topography.  The basal friction parameter \u201cbeta\u201d is held to a minimum of 100 Pa yr/m for grounded ice to prevent very fast sliding."
+            ]
+        }, 
+        "cmip6.landice.grid.name": {
+            "values": [
+                "gland4"
+            ]
+        }, 
+        "cmip6.landice.grid.overview": {
+            "values": [
+                "CISM uses a structured grid with uniform rectangular grid cells.  For CMIP6, the Greenland grid has square grid cells 4 km on a side.  It is a polar stereographic grid using the EPSG:3413 projection (see https://epsg.io/3413)."
+            ]
+        }, 
+        "cmip6.landice.grid.adaptive_grid": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.landice.grid.base_resolution": {
+            "values": [
+                4000
+            ]
+        }, 
+        "cmip6.landice.grid.projection": {
+            "values": [
+                "polar_stereographic"
+            ]
+        }, 
+        "cmip6.landice.glaciers.name": {
+            "values": [
+                "There is no glacier model per se.  Different aspects of glaciers are simulated in CLM and CISM as described below.\n"
+            ]
+        }, 
+        "cmip6.landice.glaciers.overview": {
+            "values": [
+                "Recall that the \u201clandice model\u201d has two components: (1) the dynamic ice sheet component (CISM), and (2) the ice sheet SMB component in CLM (see 1.1.1.3).  CISM makes no distinction between glaciers and ice sheets.  Dynamic Greenland simulations typically contain peripheral glaciers that are disconnected from the main ice sheet.\n\nCLM has several surface types, or \u201clandunits\u201d, including a glacier surface type.  Glaciers in CLM can be defined as the glaciated portions of grid cells.  CLM has no notion of ice thickness or dynamics; its glacier physics is limited to computations related to near-surface snow and ice cover.  The glacier SMB in a grid cell can be computed either in a single elevation class (aka glacier column) or in multiple elevation classes."
+            ]
+        }, 
+        "cmip6.landice.glaciers.description": {
+            "values": [
+                "The CISM domain typically includes some peripheral glaciers (i.e., glaciers on the island of Greenland, disconnected from the main ice sheet).  In CISM computations of ice sheet velocity, thickness, and temperature, all ice-covered grid cells are treated identically, whether or not they are connected to the main ice sheet.  See Section 4 for details.\n\nCLM, as noted in 3.1.1.2, has a glacier surface type.  Glaciated grid cells can lie either within or outside an ice sheet.  The following statements apply to glacier columns outside the Greenland and Antarctic ice sheets:\n- Glaciated grid cells contain a single elevation class (unlike glaciated grid cells in Greenland and Antarctica, which contain multiple elevation classes to support more accurate SMB downscaling).\n- If the snow in a glacier column completely melts, then the underlying ice can melt.  Meltwater from underlying ice remain in place until it refreezes, possible staying in place indefinitely in a warm climate.  Thus, ice melt does not result in any runoff.  (For Greenland and Antarctica, melted ice runs off to the ocean.)\n- The snow thickness is capped at a maximum of 10 m liquid water equivalent.  Any additional snow accumulation is routed to the ocean as liquid runoff, generating a negative sensible heat flux.  This matches the behavior of non-glacier columns with deep seasonal snow, and avoids unrealistic ocean cooling in regions that have little solid runoff in reality.  (For Greenland and Antarctica, snow is also capped at 10 m, but additional accumulation is routed to the ocean as solid runoff, to crudely simulation iceberg calving.)\n\nApart from these differences in elevation classes and the treatment of solid and liquid runoff, CLM\u2019s glacier treatment is independent of geographic region (i.e., whether a grid cell lies inside or outside an ice sheet).  Glacier physics is described in detail in the \u201cGlaciers\u201d chapter of the CLM Technical Note (https://escomp.github.io/ctsm-docs)."
+            ]
+        }, 
+        "cmip6.landice.glaciers.dynamic_areal_extent": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.landice.ice.name": {
+            "values": [
+                "Community Ice Sheet Model (CISM) version 2.1"
+            ]
+        }, 
+        "cmip6.landice.ice.overview": {
+            "values": [
+                "CISM is a parallel, 3- D thermomechanical model, written mainly in Fortran, that solves equations for the momentum balance and the thickness and temperature evolution of ice sheets.  CISM\u2019s velocity solver incorporates a hierarchy of Stokes flow approximations, including shallow-shelf, depth-integrated higher order, and 3-D higher order.  (CMIP6 simulations use the depth-integrated higher-order solver.)  CISM also includes parameterizations of physical processes such as basal sliding, iceberg calving, sub-ice-shelf melting, and grounding-line migration.  The model has been verified for standard test problems, including the Ice Sheet Model Intercomparison Project for Higher-Order Models (ISMIP-HOM) experiments, and has participated in the initMIP-Greenland initialization experiment.  In multimillennial simulations of the Greenland ice sheet, the flow patterns and thermal state in CISM are broadly consistent with observations.  The model is described and evaluated in detail by Lipscomb et al. (2019).  The code is open-source and remains under active development. "
+            ]
+        }, 
+        "cmip6.landice.ice.grounding_line_method": {
+            "values": [
+                "Fixed grid size"
+            ]
+        }, 
+        "cmip6.landice.ice.ice_sheet": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.landice.ice.ice_shelf": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.landice.ice.mass_balance.surface_mass_balance": {
+            "values": [
+                "The surface mass balance (SMB) is computed in the land model, CLM. A flux is computed and sent to the coupler every land model time step (1/2 hour), on the land grid. Separate fluxes are computed for each of 10 glacier elevation classes in each grid cell. The coupler computes annual averages of this flux, then downscales it to the CISM grid, using both horizontal and vertical interpolation. CLM\u2019s SMB only considers changes in the ice column, not changes in the snow pack. A positive SMB (ice accumulation) is generated when the snow pack grows beyond its prescribed limit (snow capping). A negative SMB is generated when CLM's ice column experiences melt. A positive (but not negative) SMB can be generated over CLM's vegetated land unit; this condition triggers glacial inception in CISM.\n\nCLM\u2019s SMB calculation is described in more detail in the \u201cGlaciers\u201d chapter of the CLM Technical Note (https://escomp.github.io/ctsm-docs). The downscaling of SMB is described in more detail in the \u201cCoupling CLM and CISM\u201d chapter of the CESM Land Ice documentation (https://escomp.github.io/cism-docs)."
+            ]
+        }, 
+        "cmip6.landice.ice.mass_balance.basal.bedrock": {
+            "values": [
+                "CISM solves an implicit equation for vertical diffusion in each grid cell column.  This equation uses either of two lower boundary conditions:\n(1) The basal temperature, Tb, is below the pressure melting point temperature, Tpmp.  In this case there is a balance of heat sources and sinks (i.e., geothermal, frictional, and diffusive fluxes) at the basal boundary.\n(2) Tb = Tpmp, in which case there is usually a net positive heat flux at the ice\u2013bedrock boundary.\nFor case (2) the net heat flux, if positive, is used to melt ice, according to Eq. (52) in Lipscomb et al. (2019).  If the net heat flux is negative, then basal water refreezes.  When no basal water remains, Tb is reduced to a value slightly lower than Tpmp, and the grid cell transitions from case (2) to case (1).  When case (1) results in Tb >= Tpmp, the cell transitions to case (2).\n\nCISM simulations for CMIP6 use a local basal till model following Aschwanden et al. (2016).  Basal water depth is capped at a maximum value of 2 m and is drained at a constant rate of 1 mm/yr.  The basal water depth is related to effective pressure following Bueler and van Pelt (2015).\n"
+            ]
+        }, 
+        "cmip6.landice.ice.mass_balance.basal.ocean": {
+            "values": [
+                "In CISM Greenland simulations for CMIP6, any floating ice calves immediately.  Thus there is no sub-ice-shelf melting."
+            ]
+        }, 
+        "cmip6.landice.ice.mass_balance.frontal.calving": {
+            "values": [
+                "Calving for Greenland is implemented using a simple \u201cno-float\u201d criterion.  After the ice thickness equation is stepped forward in time, CISM identifies floating cells by the criterion b < -(rhoi/rhoo)*H, where rhoi is ice density, rhoo is seawater density, H is ice thickness, and b is bedrock elevation (negative below sea level), with H and b evaluated at grid cell centers.  All floating cells are calved immediately.\n"
+            ]
+        }, 
+        "cmip6.landice.ice.mass_balance.frontal.melting": {
+            "values": [
+                "There is no frontal melting at marine ice margins.\n"
+            ]
+        }, 
+        "cmip6.landice.ice.dynamics.description": {
+            "values": [
+                "CISM's parallel, higher-order dynamical core, known as Glissade, solves equations for conservation of momentum (i.e., an appropriate approximation of Stokes flow), mass, and internal energy.  The equations are discretized on a structured 3D grid.  In the map plane, the grid consists of rectangular cells, each with four vertices.  The vertical levels of the grid are based on a terrain-following sigma coordinate system.  Scalars such as ice thickness and temperature are located at cell centers, and the horizontal velocity components are computed at vertices.  \n\nFor CMIP6 simulations, CISM uses a depth-integrated viscosity approximation (DIVA), which is based on Goldberg (2011) and is part of the L1L2 family of approximations.  DIVA can be derived from the 3D Blatter-Pattyn approximation by replacing horizontal velocity gradients in the effective strain rate with their vertical averages.  Then the equations of motion can be integrated in z, yielding a 2D elliptic system of equations for the vertical-mean velocity components (u_mean,v_mean).  This 2D system (eq. 25 of Lipscomb et al. 2019) is formally equivalent to the shallow-shelf approximation, except that the basal boundary terms are modified to incorporate vertical shear.   The elliptic system is assembled and solved using finite-element methods.  After computing u_mean and v_mean at each vertex, it is straightforward to evaluate the 3D velocity components u(z) and v(z).\n\nHorizontal transport of mass and tracers is described by equations of the form of (58) and (59) in Lipscomb et al. (2019).  These equations are solved using an incremental remapping method, which is a kind of finite-volume scheme.  This scheme is conservative, non-oscillatory, and formally second-order accurate, except where reduced locally to first-order to preserve monotonicity.  After horizontal transport, there is a vertical remapping step to restore tracers to the vertical sigma coordinate.\n\nConservation of internal energy is divided into an advective component (linked to the mass transport scheme) and a diffusive/dissipative component (eq. 38 of Lipscomb et al. 2019).  Temperature evolution is computed by solving an implicit tridiagonal equation with suitable boundary conditions in each column.\n\nFor the velocity solver, Glissade assumes a basal friction law of the form tau_b = beta * u_b, where tau_b is basal shear stress, u_b is basal velocity, and beta is a friction parameter.  For CMIP6 simulations, CISM relates basal shear stress to velocity using a pseudo-plastic basal sliding law (eq. 67 in Lipscomb et al. 2019) as described by Aschwanden et al. (2013).  The basal yield stress is proportional to effective pressure, which is a function of basal water depth (eq. 70 of Lipscomb et al. 2019) following Bueler and van Pelt (2015).\n\nSections 3.1, 3.2, and 3.3. of Lipscomb et al. (2019) give a detailed description of Glissade\u2019s velocity, temperature, and transport solvers, respectively.  Section 3.4 describes basal sliding.\n\nNo ice shelves are included in CISM Greenland simulations for CMIP6.\n"
+            ]
+        }, 
+        "cmip6.landice.ice.dynamics.approximation": {
+            "values": [
+                "Other: document in cell to the right"
+            ]
+        }, 
+        "cmip6.landice.ice.dynamics.adaptive_timestep": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.landice.ice.dynamics.timestep": {
+            "values": [
+                3153600
+            ]
+        }
+    }
+}

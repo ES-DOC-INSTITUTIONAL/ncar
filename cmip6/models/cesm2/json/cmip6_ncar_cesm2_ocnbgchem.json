@@ -1,0 +1,273 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "ncar", 
+    "seedingSource": null, 
+    "sourceID": "cesm2", 
+    "topic": "ocnbgchem", 
+    "content": {
+        "cmip6.ocnbgchem.key_properties.name": {
+            "values": [
+                "BEC"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.keywords": {
+            "values": [
+                "plankton functional groups, multiple limiting nutrients, iron cycle, variable elemental stoichiometry"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.overview": {
+            "values": [
+                "The ecosystem includes multiple phytoplankton functional groups (diatoms, diazotrophs, small phytoplankton, and coccolithophores (implicit)) and multiple potentially growth limiting nutrients (nitrate, ammonium, phosphate, silicate, and iron). There is one zooplankton group, dissolved organic material (semi-labile and refractory), implicity sinking particulate pools and explicit simulation of the biogeochemical cycling of key elements (C, N, P, Fe, Si, O, plus alkalinity). The ecosystem component is coupled with a carbonate chemistry module based on the Ocean Carbon Model Intercomparison Project (OCMIP) allowing dynamic computation of surface ocean pCO2 and air-sea CO2 flux."
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.model_type": {
+            "values": [
+                "PFT"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.elemental_stoichiometry": {
+            "values": [
+                "Mix of both"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.elemental_stoichiometry_details": {
+            "values": [
+                "C:N fixed at 117:16, C:P variable, C:Si variable, C:Fe variable"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.prognostic_variables": {
+            "values": [
+                "PO4,NO3,SiO3,NH4,Fe,Lig,O2,DIC,DIC_NAT,ALK,ALK_NAT,DOC,DON,DOP,DOPr,DONr,DOCr,zooC,spChl,spC,spP,spFe,spCaCO3,diatChl,diatC,diatP,diatFe,diatSi,diazChl,diazC,diazP,diazFe"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.diagnostic_variables": {
+            "values": [
+                "N/A"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.damping": {
+            "values": [
+                "The following tracers are restored to climatology in the model's marginal seas (Baltic Sea, Black Sea, Red Sea): PO4,NO3,SiO3,O2,ALK,ALK_NAT"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.time_stepping_framework.passive_tracers_transport.method": {
+            "values": [
+                "Use ocean model transport time step"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.time_stepping_framework.biology_sources_sinks.method": {
+            "values": [
+                "Use ocean model transport time step"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.transport_scheme.type": {
+            "values": [
+                "Online"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.transport_scheme.scheme": {
+            "values": [
+                "Use that of ocean model"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.boundary_forcing.atmospheric_deposition": {
+            "values": [
+                "From Atmospheric Chemistry model"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.boundary_forcing.river_input": {
+            "values": [
+                "From file (climatology)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.boundary_forcing.sediments_from_boundary_conditions": {
+            "values": [
+                "Fe"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CO2_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CO2_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.O2_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.O2_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.DMS_exchange_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.N2_exchange_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.N2O_exchange_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CFC11_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CFC11_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CFC12_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.CFC12_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.SF6_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.SF6_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.13CO2_exchange_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.14CO2_exchange_present": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.14CO2_exchange_type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.gas_exchange.other_gases": {
+            "values": [
+                "NHx emissions, per Paulot et al., 2015, Global Biogeochem. Cycles, doi:10.1002/2015GB005106"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.carbon_chemistry.type": {
+            "values": [
+                "OMIP protocol"
+            ]
+        }, 
+        "cmip6.ocnbgchem.key_properties.tuning_applied.description": {
+            "values": [
+                "Parameters were tuned with attention to the following aspects of the model: surface nutrient distributions, primary productivity, appropriate balance in productivity between diatoms and small phytoplankton, export flux at 100m, nutrient drift at mid-depth, balance in the nitrogen cycle, balance between prescribed riverine inputs and prognostic losses to sediments"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.name": {
+            "values": [
+                "BEC"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.sulfur_cycle_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.nutrients_present": {
+            "values": [
+                "Nitrogen (N)", 
+                "Phosphorous (P)", 
+                "Silicon (S)", 
+                "Iron (Fe)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.nitrous_species_if_N": {
+            "values": [
+                "Nitrates (NO3)", 
+                "Amonium (NH4)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.nitrous_processes_if_N": {
+            "values": [
+                "Dentrification", 
+                "N fixation", 
+                "Other: document in cell to the right"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.ecosystem.upper_trophic_levels_definition": {
+            "values": [
+                "The model has a single grazer."
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.ecosystem.upper_trophic_levels_treatment": {
+            "values": [
+                "The parameters governing grazing depend on the grazer's prey."
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.ecosystem.phytoplankton.type": {
+            "values": [
+                "PFT only (specify below)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.ecosystem.phytoplankton.pft": {
+            "values": [
+                "Diatoms", 
+                "Nfixers", 
+                "Other: document in cell to the right"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.ecosystem.zooplankton.type": {
+            "values": [
+                "Generic"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.disolved_organic_matter.bacteria_present": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.disolved_organic_matter.lability": {
+            "values": [
+                "Semi-labile", 
+                "Refractory"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.particules.method": {
+            "values": [
+                "Diagnostic (Balast)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.dic_alkalinity.carbon_isotopes": {
+            "values": [
+                "C14)"
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.dic_alkalinity.abiotic_carbon": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.ocnbgchem.tracers.dic_alkalinity.alkalinity": {
+            "values": [
+                "Prognostic"
+            ]
+        }
+    }
+}
