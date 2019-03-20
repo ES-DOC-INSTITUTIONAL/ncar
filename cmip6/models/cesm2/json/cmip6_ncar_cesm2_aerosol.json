@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "aerosol", 
     "content": {
@@ -376,7 +376,7 @@
         }, 
         "cmip6.aerosol.model.bulk_scheme_species": {
             "values": [
-                "Other: document in cell to the right"
+                "Other"
             ]
         }
     }

@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "ocnbgchem", 
     "content": {
@@ -208,7 +208,7 @@
             "values": [
                 "Dentrification", 
                 "N fixation", 
-                "Other: document in cell to the right"
+                "Other"
             ]
         }, 
         "cmip6.ocnbgchem.tracers.ecosystem.upper_trophic_levels_definition": {
@@ -230,7 +230,7 @@
             "values": [
                 "Diatoms", 
                 "Nfixers", 
-                "Other: document in cell to the right"
+                "Other"
             ]
         }, 
         "cmip6.ocnbgchem.tracers.ecosystem.zooplankton.type": {
