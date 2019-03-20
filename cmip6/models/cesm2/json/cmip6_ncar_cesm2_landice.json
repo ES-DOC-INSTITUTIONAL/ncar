@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "landice", 
     "content": {
@@ -22,7 +22,7 @@
         }, 
         "cmip6.landice.key_properties.ice_albedo": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.landice.key_properties.atmospheric_coupling_variables": {
@@ -37,7 +37,7 @@
         }, 
         "cmip6.landice.key_properties.prognostic_variables": {
             "values": [
-                "Other", 
+                "Other: document in cell to the right", 
                 "Ice thickness", 
                 "Ice temperature", 
                 "Ice velocity"
@@ -165,7 +165,7 @@
         }, 
         "cmip6.landice.ice.dynamics.approximation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.landice.ice.dynamics.adaptive_timestep": {

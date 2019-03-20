@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "ocean", 
     "content": {
@@ -62,7 +62,7 @@
         }, 
         "cmip6.ocean.key_properties.seawater_properties.ocean_freezing_point": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.key_properties.seawater_properties.ocean_specific_heat": {
@@ -214,7 +214,7 @@
         }, 
         "cmip6.ocean.timestepping_framework.tracers.scheme": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.tracers.time_step": {
@@ -224,12 +224,12 @@
         }, 
         "cmip6.ocean.timestepping_framework.baroclinic_dynamics.type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.baroclinic_dynamics.scheme": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.baroclinic_dynamics.time_step": {
@@ -344,7 +344,7 @@
         }, 
         "cmip6.ocean.lateral_physics.momentum.eddy_viscosity_coeff.type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.lateral_physics.momentum.eddy_viscosity_coeff.variable_coefficient": {
@@ -389,7 +389,7 @@
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.variable_coefficient": {
@@ -484,7 +484,7 @@
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.tracers.type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.tracers.profile": {
@@ -499,7 +499,7 @@
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.momentum.type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.momentum.profile": {
@@ -529,7 +529,7 @@
         }, 
         "cmip6.ocean.uplow_boundaries.bottom_boundary_layer.type_of_bbl": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.ocean.uplow_boundaries.bottom_boundary_layer.sill_overflow": {

@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "land", 
     "content": {
@@ -404,7 +404,7 @@
         }, 
         "cmip6.land.river_routing.oceanic_discharge.discharge_type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.land.river_routing.oceanic_discharge.quantities_transported": {

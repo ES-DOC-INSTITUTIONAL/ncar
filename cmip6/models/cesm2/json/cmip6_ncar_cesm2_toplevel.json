@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "toplevel", 
     "content": {
@@ -72,7 +72,7 @@
         }, 
         "cmip6.toplevel.key_properties.software_properties.coupler": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.key_properties.coupling.atmosphere_double_flux": {
@@ -212,47 +212,47 @@
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.SO4.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.nitrate.provision": {
@@ -262,7 +262,7 @@
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
@@ -272,7 +272,7 @@
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
@@ -287,47 +287,47 @@
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.dust.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.historical_explosive_volcanic_aerosol_implementation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.future_explosive_volcanic_aerosol_implementation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.historical_explosive_volcanic_aerosol_implementation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.future_explosive_volcanic_aerosol_implementation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.other.land_use.provision": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.toplevel.radiative_forcings.other.land_use.crop_change_only": {

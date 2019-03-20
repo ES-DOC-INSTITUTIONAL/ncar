@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "seaice", 
     "content": {
@@ -29,17 +29,17 @@
                 "Sea ice enthalpy", 
                 "Internal ice stress", 
                 "Salinity", 
-                "Other", 
-                "Other", 
-                "Other", 
-                "Other", 
-                "Other", 
-                "Other"
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.seaice.key_properties.seawater_properties.ocean_freezing_point": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.seaice.key_properties.resolution.name": {
@@ -124,7 +124,7 @@
         }, 
         "cmip6.seaice.key_properties.conservation.properties": {
             "values": [
-                "Other", 
+                "Other: document in cell to the right", 
                 "Salt", 
                 "Energy"
             ]
@@ -279,7 +279,7 @@
         }, 
         "cmip6.seaice.thermodynamics.energy.enthalpy_formulation": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.seaice.thermodynamics.energy.thermal_conductivity": {

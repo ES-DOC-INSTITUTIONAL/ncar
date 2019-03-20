@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": "Spreadsheet", 
+    "seedingSource": null, 
     "sourceID": "cesm2", 
     "topic": "atmos", 
     "content": {
@@ -72,7 +72,7 @@
         }, 
         "cmip6.atmos.key_properties.orography.type": {
             "values": [
-                "Fixed"
+                "Fixed: present day"
             ]
         }, 
         "cmip6.atmos.key_properties.orography.time-varying": {
@@ -127,7 +127,7 @@
         }, 
         "cmip6.atmos.grid.discretisation.horizontal.horizontal_pole": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.grid.discretisation.horizontal.grid_type": {
@@ -192,8 +192,8 @@
                 "CO2", 
                 "CH4", 
                 "O3", 
-                "Other", 
-                "Other"
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.radiation.shortwave_GHG.ODS": {
@@ -204,7 +204,7 @@
         }, 
         "cmip6.atmos.radiation.shortwave_GHG.other_flourinated_gases": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.radiation.shortwave_cloud_ice.physical_representation": {
@@ -281,8 +281,8 @@
                 "CH4", 
                 "CFC-11 eq", 
                 "CFC-12 eq", 
-                "Other", 
-                "Other"
+                "Other: document in cell to the right", 
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.radiation.longwave_GHG.ODS": {
@@ -293,7 +293,7 @@
         }, 
         "cmip6.atmos.radiation.longwave_GHG.other_flourinated_gases": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
@@ -347,7 +347,7 @@
         }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
@@ -408,7 +408,7 @@
         }, 
         "cmip6.atmos.turbulence_convection.shallow_convection.scheme_type": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.shallow_convection.scheme_method": {
@@ -487,7 +487,7 @@
             "values": [
                 "Entrainment", 
                 "Detrainment", 
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.cloud_scheme.atmos_coupling": {
@@ -549,7 +549,7 @@
         }, 
         "cmip6.atmos.observation_simulation.isscp_attributes.top_height_estimation_method": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.observation_simulation.isscp_attributes.top_height_direction": {
@@ -604,7 +604,7 @@
         }, 
         "cmip6.atmos.observation_simulation.lidar_inputs.overlap": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.gravity_waves.name": {
@@ -624,7 +624,7 @@
         }, 
         "cmip6.atmos.gravity_waves.background": {
             "values": [
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.gravity_waves.subgrid_scale_orography": {
@@ -666,7 +666,7 @@
         "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.source_mechanisms": {
             "values": [
                 "Convection", 
-                "Other"
+                "Other: document in cell to the right"
             ]
         }, 
         "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.calculation_method": {
