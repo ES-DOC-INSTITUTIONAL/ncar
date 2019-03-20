@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "ocnbgchem", 
     "content": {
@@ -22,12 +22,12 @@
         }, 
         "cmip6.ocnbgchem.key_properties.model_type": {
             "values": [
-                "PFT"
+                "PFT: Several plankton types"
             ]
         }, 
         "cmip6.ocnbgchem.key_properties.elemental_stoichiometry": {
             "values": [
-                "Mix of both"
+                "Mix of both: Both fixed and mixed stoichiometry"
             ]
         }, 
         "cmip6.ocnbgchem.key_properties.elemental_stoichiometry_details": {
@@ -208,7 +208,7 @@
             "values": [
                 "Dentrification", 
                 "N fixation", 
-                "Other: document in cell to the right"
+                "Other: Nitrification"
             ]
         }, 
         "cmip6.ocnbgchem.tracers.ecosystem.upper_trophic_levels_definition": {
@@ -230,7 +230,7 @@
             "values": [
                 "Diatoms", 
                 "Nfixers", 
-                "Other: document in cell to the right"
+                "Other: Picophytoplankton"
             ]
         }, 
         "cmip6.ocnbgchem.tracers.ecosystem.zooplankton.type": {
@@ -245,8 +245,8 @@
         }, 
         "cmip6.ocnbgchem.tracers.disolved_organic_matter.lability": {
             "values": [
-                "Semi-labile", 
-                "Refractory"
+                "Semi-labile: Few days to a few years", 
+                "Refractory: Over a few years"
             ]
         }, 
         "cmip6.ocnbgchem.tracers.particules.method": {
@@ -262,11 +262,6 @@
         "cmip6.ocnbgchem.tracers.dic_alkalinity.abiotic_carbon": {
             "values": [
                 true
-            ]
-        }, 
-        "cmip6.ocnbgchem.tracers.dic_alkalinity.alkalinity": {
-            "values": [
-                "Prognostic"
             ]
         }
     }

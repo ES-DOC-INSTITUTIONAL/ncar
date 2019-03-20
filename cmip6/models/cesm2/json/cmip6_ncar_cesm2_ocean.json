@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "ocean", 
     "content": {
@@ -37,7 +37,7 @@
                 "Salinity", 
                 "U-velocity", 
                 "V-velocity", 
-                "SSH"
+                "SSH: Sea Surface Height"
             ]
         }, 
         "cmip6.ocean.key_properties.seawater_properties.eos_type": {
@@ -62,7 +62,7 @@
         }, 
         "cmip6.ocean.key_properties.seawater_properties.ocean_freezing_point": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: linear function of salinity"
             ]
         }, 
         "cmip6.ocean.key_properties.seawater_properties.ocean_specific_heat": {
@@ -192,11 +192,6 @@
                 "Arakawa B-grid"
             ]
         }, 
-        "cmip6.ocean.grid.discretisation.horizontal.scheme": {
-            "values": [
-                "Finite volumes"
-            ]
-        }, 
         "cmip6.ocean.timestepping_framework.name": {
             "values": [
                 "Leapfrog"
@@ -209,12 +204,12 @@
         }, 
         "cmip6.ocean.timestepping_framework.diurnal_cycle": {
             "values": [
-                "Via coupling"
+                "Via coupling: Diurnal cycle via coupling frequency"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.tracers.scheme": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Leapfrog with Robert filter"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.tracers.time_step": {
@@ -222,14 +217,9 @@
                 3600
             ]
         }, 
-        "cmip6.ocean.timestepping_framework.baroclinic_dynamics.type": {
-            "values": [
-                "Other: document in cell to the right"
-            ]
-        }, 
         "cmip6.ocean.timestepping_framework.baroclinic_dynamics.scheme": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Leapfrog with Robert filter"
             ]
         }, 
         "cmip6.ocean.timestepping_framework.baroclinic_dynamics.time_step": {
@@ -245,11 +235,6 @@
         "cmip6.ocean.timestepping_framework.barotropic.time_step": {
             "values": [
                 3600
-            ]
-        }, 
-        "cmip6.ocean.timestepping_framework.vertical_physics.method": {
-            "values": [
-                "vertical mixing of momentum and tracers treated implicitly"
             ]
         }, 
         "cmip6.ocean.advection.name": {
@@ -312,11 +297,6 @@
                 "upwind3"
             ]
         }, 
-        "cmip6.ocean.advection.vertical_tracers.flux_limiter": {
-            "values": [
-                false
-            ]
-        }, 
         "cmip6.ocean.lateral_physics.name": {
             "values": [
                 "Gent-McWilliams"
@@ -324,7 +304,7 @@
         }, 
         "cmip6.ocean.lateral_physics.scheme": {
             "values": [
-                "None"
+                "None: No transient eddies in ocean"
             ]
         }, 
         "cmip6.ocean.lateral_physics.momentum.operator.direction": {
@@ -334,17 +314,17 @@
         }, 
         "cmip6.ocean.lateral_physics.momentum.operator.order": {
             "values": [
-                "Harmonic"
+                "Harmonic: Second order"
             ]
         }, 
         "cmip6.ocean.lateral_physics.momentum.operator.discretisation": {
             "values": [
-                "Second order"
+                "Second order: Second order"
             ]
         }, 
         "cmip6.ocean.lateral_physics.momentum.eddy_viscosity_coeff.type": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: anisotropic, spatially varying"
             ]
         }, 
         "cmip6.ocean.lateral_physics.momentum.eddy_viscosity_coeff.variable_coefficient": {
@@ -379,17 +359,17 @@
         }, 
         "cmip6.ocean.lateral_physics.tracers.operator.order": {
             "values": [
-                "Harmonic"
+                "Harmonic: Second order"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.operator.discretisation": {
             "values": [
-                "Second order"
+                "Second order: Second order"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.type": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: spatially and temporally varing following the Near-Surface Eddy Flux Parameterization and Buoyancy-profile dependency in the vertical"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.variable_coefficient": {
@@ -409,17 +389,12 @@
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_induced_velocity.type": {
             "values": [
-                "GM"
+                "GM: Gent & McWilliams"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_induced_velocity.flux_type": {
             "values": [
                 "skew"
-            ]
-        }, 
-        "cmip6.ocean.lateral_physics.tracers.eddy_induced_velocity.added_diffusivity": {
-            "values": [
-                "state (stratification) dependent as in the isopycnal diffusivity"
             ]
         }, 
         "cmip6.ocean.vertical_physics.name": {
@@ -484,7 +459,7 @@
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.tracers.type": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Shear mixing + internal wave breaking + tidal mixing + double diffusion + convection"
             ]
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.tracers.profile": {
@@ -499,17 +474,12 @@
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.momentum.type": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Shear mixing + internal wave breaking + tidal mixing + convection"
             ]
         }, 
         "cmip6.ocean.vertical_physics.interior_mixing.momentum.profile": {
             "values": [
                 "No"
-            ]
-        }, 
-        "cmip6.ocean.vertical_physics.interior_mixing.momentum.background": {
-            "values": [
-                "Same as for tracers, but multipled by a turbulent Prandtl number of 10"
             ]
         }, 
         "cmip6.ocean.uplow_boundaries.free_surface.scheme": {
@@ -529,12 +499,7 @@
         }, 
         "cmip6.ocean.uplow_boundaries.bottom_boundary_layer.type_of_bbl": {
             "values": [
-                "Other: document in cell to the right"
-            ]
-        }, 
-        "cmip6.ocean.uplow_boundaries.bottom_boundary_layer.sill_overflow": {
-            "values": [
-                "Streamtube type formulation as described in Danabasoglu et al (2010)"
+                "Other: None"
             ]
         }, 
         "cmip6.ocean.boundary_forcing.surface_pressure": {
@@ -585,11 +550,6 @@
         "cmip6.ocean.boundary_forcing.tracers.fresh_water_forcing.from_sea_ice": {
             "values": [
                 "Virtual salt flux"
-            ]
-        }, 
-        "cmip6.ocean.boundary_forcing.tracers.fresh_water_forcing.forced_mode_restoring": {
-            "values": [
-                "4-year time scale over 50 m with its horizontal (global) mean subtracted"
             ]
         }
     }

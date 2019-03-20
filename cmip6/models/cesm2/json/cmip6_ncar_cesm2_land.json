@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "land", 
     "content": {
@@ -75,11 +75,6 @@
                 "Fortran"
             ]
         }, 
-        "cmip6.land.key_properties.tuning_applied.description": {
-            "values": [
-                "See discussion in Lawrence et al. (2019, Section 2.3.11) and Fisher et al. (2019).  Tuning in land-only for key quantities such as Leaf Area Index and GPP.  Relatively even weight given to 'climate performance' versus process-oriented.  Some biases could not be resolved through parameter tuning.  Challenges with respect to specific PFT survivability rates were encountered, especially in pre-industrial conditions.  See Lawrence et al. (2019) for more discussion."
-            ]
-        }, 
         "cmip6.land.grid.name": {
             "values": [
                 "Cartesian latitude longitude "
@@ -103,11 +98,6 @@
         "cmip6.land.grid.vertical.description": {
             "values": [
                 "The soil column can be discretized into an arbitrary number of layers. The default vertical discretization uses 25 layers, of which 20 are hydrologically and biogeochemically active. The deepest 5 layers represent bedrock.\nhttps://escomp.github.io/ctsm-docs/doc/build/html/tech_note/Ecosystem/CLM50_Tech_Note_Ecosystem.html#vertical-discretization\nThe hydrologically and biogeochemically active portion of the soil column can be restricted to a thickness less than that of the maximum soil depth. By providing a depth-to-bedrock dataset, which varies spatially, the number of layers used in the hydrologic and biogeochemical calculations is specified (5-20 layers).\nhttps://escomp.github.io/ctsm-docs/doc/build/html/tech_note/Ecosystem/CLM50_Tech_Note_Ecosystem.html#depth-to-bedrock\n\n"
-            ]
-        }, 
-        "cmip6.land.grid.vertical.total_depth": {
-            "values": [
-                50
             ]
         }, 
         "cmip6.land.snow.overview": {
@@ -172,14 +162,6 @@
         "cmip6.land.snow.snow_albedo.type": {
             "values": [
                 "Prognostic"
-            ]
-        }, 
-        "cmip6.land.snow.snow_albedo.functions": {
-            "values": [
-                "Snow density", 
-                "Snow age", 
-                "Snow grain type", 
-                "Aerosol deposition"
             ]
         }, 
         "cmip6.land.carbon_cycle.overview": {
@@ -317,11 +299,6 @@
                 "Vertically-resolved Century-based first-order decay"
             ]
         }, 
-        "cmip6.land.carbon_cycle.permafrost_carbon.impact_on_soil_properties": {
-            "values": [
-                "Soil thermal and hydrologic properties depend on water content and phase.  An ice impedance function is used that strongly impedes liquid water flow through icy soil.  Organic fraction in each soil layer, which also affects thermal and hydrologic soil properties, are specified from a dataset and are constant through time, even if prognostic soil carbon stocks change.  "
-            ]
-        }, 
         "cmip6.land.nitrogen_cycle.overview": {
             "values": [
                 "The representation of the nitrogen cycle in CLM5, originally based on Biome-BGC, is substantially modified relative to CLM4 and CLM4.5. First, recognizing that leaf nitrogen content is dynamic, implementation of  \u201cFlexCN\u201d functionality affords flexible plant stoichiometry and thus a single realized GPP calculation (as opposed to separate potential and actual fluxes). Second, recognizing that foliar photosynthetic capacity responds to environmental conditions and changes over space and time, the Leaf Utilization of Nitrogen for Assimilation (LUNA) module provides a prognostic optimization of maximum leaf-level carboxylation and electron transport rates.  Third, recognizing that changes in nitrogen supply or demand have consequences for plant productivity, the Fixation and Uptake of Nitrogen (FUN) module calculates the carbon costs of various nitrogen acquisition strategies and adjusts carbon expenditure on N uptake among biological fixation, active uptake, and retranslocation. Note, as currently implemented the plant C costs calculated by FUN only serve as an additional source of autotrophic respiration, not as an actual belowground C flux to roots or mycorrhizae that interacts with the soil biogeochemistry simulated in CLM5. Collectively, FlexCN, LUNA, and FUN more mechanistically represent plant nitrogen dynamics in CLM5 and afford opportunities to understand, refine, and improve simulated C-N biogeochemical dynamics.   Competition between plant and microbial nitrogen demand can be resolved. Mineral nitrogen in the soil pool at the beginning of the timestep is considered the available supply. The theoretical maximum demand for nitrogen by plants to meet the entire carbon uptake given an N cost of zero (and therefore represents the upper bound on N requirements). N uptake costs that are > 0 imply that the plant will take up less N that it demands, ultimately.  However, given the heuristic nature of the N competition algorithm, this discrepancy is not explicitly resolved here.  Soil carbon decomposition rates can be limited by the availability of  mineral nitrogen, but calculation of this limitation depends on first estimating the potential rates of decomposition, assuming an unlimited  mineral nitrogen supply.  Asymbiotic (or free living) N fixation is a function of evapotranspiration and is added to the inorganic nitrogen (NH4+) pool. Symbiotic N fixation is handled by the FUN model and is passed straight to the plant, not the mineral nitrogen pool.  Fertilizer is added to crops during the emergence phase.  See Sections 2.16, 2.18, 2.19, 2.21, 2.22, and 2.26 of the Technical Description for more details.  https://escomp.github.io/ctsm-docs/doc/build/html/tech_note/index.html"
@@ -335,11 +312,6 @@
         "cmip6.land.nitrogen_cycle.time_step": {
             "values": [
                 3600
-            ]
-        }, 
-        "cmip6.land.nitrogen_cycle.prognostic_variables": {
-            "values": [
-                "Nitrogen variables mirror carbon variables."
             ]
         }, 
         "cmip6.land.river_routing.name": {
@@ -404,12 +376,7 @@
         }, 
         "cmip6.land.river_routing.oceanic_discharge.discharge_type": {
             "values": [
-                "Other: document in cell to the right"
-            ]
-        }, 
-        "cmip6.land.river_routing.oceanic_discharge.quantities_transported": {
-            "values": [
-                "Water"
+                "Other: Large rivers: Estuary box model; Small rivers: diffuse"
             ]
         }, 
         "cmip6.land.lakes.overview": {
@@ -460,11 +427,6 @@
         "cmip6.land.lakes.method.endorheic_basins": {
             "values": [
                 true
-            ]
-        }, 
-        "cmip6.land.lakes.wetlands.description": {
-            "values": [
-                "Wetlands not explicitly treated.  Saturated area within natural vegetation landunit is diagnosed for purpose of methane emissions model (https://escomp.github.io/ctsm-docs/doc/build/html/tech_note/Methane/CLM50_Tech_Note_Methane.html#inundated-fraction-prediction).  Ephemeral surface water and resulting impact of surface water on ET and energy balance also calculated."
             ]
         }
     }

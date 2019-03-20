@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "landice", 
     "content": {
@@ -22,7 +22,7 @@
         }, 
         "cmip6.landice.key_properties.ice_albedo": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: The albedo of snow-covered surfaces is computed by CLM using the Snow, Ice, and Aerosol Radiative Model (SNICAR), as described in the \u201cSurface Albedos\u201d chapter of the CLM Technical Note (https://escomp.github.io/ctsm-docs). The albedo of bare ice is prescribed at 0.50 in the visible and 0.30 in the near-infrared."
             ]
         }, 
         "cmip6.landice.key_properties.atmospheric_coupling_variables": {
@@ -37,7 +37,7 @@
         }, 
         "cmip6.landice.key_properties.prognostic_variables": {
             "values": [
-                "Other: document in cell to the right", 
+                "Other: Also: applied surface mass balance (m/yr ice, which can differ locally from the SMB received from the coupler), applied basal mass balance (m/yr ice), calving rate (m/yr ice), basal water depth (m), basal friction parameter \u201cbeta\u201d (ratio of basal shear stress to basal ice speed, Pa yr/m)", 
                 "Ice thickness", 
                 "Ice temperature", 
                 "Ice velocity"
@@ -56,11 +56,6 @@
         "cmip6.landice.key_properties.software_properties.code_languages": {
             "values": [
                 "Fortran 90, Python"
-            ]
-        }, 
-        "cmip6.landice.key_properties.tuning_applied.description": {
-            "values": [
-                "In simulations without interactive ice sheets, the ice sheet extent and thickness are held fixed at observed modern values.  In simulations with an interactive Greenland ice sheet, the ice sheet evolves in tandem with the AOGCM and is unconstrained by observed ice thickness or velocity.  \nIn particular, CISM does not invert for basal friction parameters to match observed thickness or velocity.  Thus, the ice thickness and extent at the end of the coupled spin-up (which serves as the initial condition for \u201cwithism\u201d simulations) can differ significantly from observed values.  \n\nSome CISM parameters, however, are not well constrained by observations, and were tuned in standalone spin-up experiments to make the ice thickness and geometry as realistic as possible.  In  interactive \u201cwithism\u201d simulations, CISM uses a pseudo-plastic basal sliding scheme (Aschwanden et al. 2013) with several tunable parameters.  We generally followed parameter choices from Aschwanden et al. (2016), with minor adjustments to reduce ice thickness and velocity biases.  We settled on q = 0.5, u_0 = 100 m/y, phi_min = 40 degrees, phi_max = 5 degrees, bed_min = -300 m, and bed_max = 700 m.  Parameter choices for the local basal till model follow Bueler and van Pelt (2015).\n\nWe also adjusted several parameters to make the simulations more robust.  Surface gradients ds/dx and ds/dy in the gravitational driving stress are limited to a magnitude of 0.10 to prevent unrealistically large ice speeds in coastal regions with steep topography.  The basal friction parameter \u201cbeta\u201d is held to a minimum of 100 Pa yr/m for grounded ice to prevent very fast sliding."
             ]
         }, 
         "cmip6.landice.grid.name": {
@@ -83,11 +78,6 @@
                 4000
             ]
         }, 
-        "cmip6.landice.grid.projection": {
-            "values": [
-                "polar_stereographic"
-            ]
-        }, 
         "cmip6.landice.glaciers.name": {
             "values": [
                 "There is no glacier model per se.  Different aspects of glaciers are simulated in CLM and CISM as described below.\n"
@@ -101,11 +91,6 @@
         "cmip6.landice.glaciers.description": {
             "values": [
                 "The CISM domain typically includes some peripheral glaciers (i.e., glaciers on the island of Greenland, disconnected from the main ice sheet).  In CISM computations of ice sheet velocity, thickness, and temperature, all ice-covered grid cells are treated identically, whether or not they are connected to the main ice sheet.  See Section 4 for details.\n\nCLM, as noted in 3.1.1.2, has a glacier surface type.  Glaciated grid cells can lie either within or outside an ice sheet.  The following statements apply to glacier columns outside the Greenland and Antarctic ice sheets:\n- Glaciated grid cells contain a single elevation class (unlike glaciated grid cells in Greenland and Antarctica, which contain multiple elevation classes to support more accurate SMB downscaling).\n- If the snow in a glacier column completely melts, then the underlying ice can melt.  Meltwater from underlying ice remain in place until it refreezes, possible staying in place indefinitely in a warm climate.  Thus, ice melt does not result in any runoff.  (For Greenland and Antarctica, melted ice runs off to the ocean.)\n- The snow thickness is capped at a maximum of 10 m liquid water equivalent.  Any additional snow accumulation is routed to the ocean as liquid runoff, generating a negative sensible heat flux.  This matches the behavior of non-glacier columns with deep seasonal snow, and avoids unrealistic ocean cooling in regions that have little solid runoff in reality.  (For Greenland and Antarctica, snow is also capped at 10 m, but additional accumulation is routed to the ocean as solid runoff, to crudely simulation iceberg calving.)\n\nApart from these differences in elevation classes and the treatment of solid and liquid runoff, CLM\u2019s glacier treatment is independent of geographic region (i.e., whether a grid cell lies inside or outside an ice sheet).  Glacier physics is described in detail in the \u201cGlaciers\u201d chapter of the CLM Technical Note (https://escomp.github.io/ctsm-docs)."
-            ]
-        }, 
-        "cmip6.landice.glaciers.dynamic_areal_extent": {
-            "values": [
-                false
             ]
         }, 
         "cmip6.landice.ice.name": {
@@ -165,17 +150,12 @@
         }, 
         "cmip6.landice.ice.dynamics.approximation": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Depth-integrated higher-order approximation"
             ]
         }, 
         "cmip6.landice.ice.dynamics.adaptive_timestep": {
             "values": [
                 false
-            ]
-        }, 
-        "cmip6.landice.ice.dynamics.timestep": {
-            "values": [
-                3153600
             ]
         }
     }

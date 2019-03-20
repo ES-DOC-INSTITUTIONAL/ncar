@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "seaice", 
     "content": {
@@ -29,17 +29,17 @@
                 "Sea ice enthalpy", 
                 "Internal ice stress", 
                 "Salinity", 
-                "Other: document in cell to the right", 
-                "Other: document in cell to the right", 
-                "Other: document in cell to the right", 
-                "Other: document in cell to the right", 
-                "Other: document in cell to the right", 
-                "Other: document in cell to the right"
+                "Other: Snow volume per grid cell area", 
+                "Other: Snow enthalpy", 
+                "Other: Surface temperature", 
+                "Other: Melt pond fraction", 
+                "Other: Black carbon concentration", 
+                "Other: Dust concentration"
             ]
         }, 
         "cmip6.seaice.key_properties.seawater_properties.ocean_freezing_point": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Assur_1958"
             ]
         }, 
         "cmip6.seaice.key_properties.resolution.name": {
@@ -124,7 +124,7 @@
         }, 
         "cmip6.seaice.key_properties.conservation.properties": {
             "values": [
-                "Other: document in cell to the right", 
+                "Other: Water", 
                 "Salt", 
                 "Energy"
             ]
@@ -141,11 +141,6 @@
                 false
             ]
         }, 
-        "cmip6.seaice.key_properties.conservation.corrected_conserved_prognostic_variables": {
-            "values": [
-                "List any variables which are conserved by *more* than the numerical scheme alone \n            (e.g. has correction applied)."
-            ]
-        }, 
         "cmip6.seaice.grid.name": {
             "values": [
                 "gx1v7"
@@ -158,7 +153,7 @@
         }, 
         "cmip6.seaice.grid.discretisation.horizontal.grid": {
             "values": [
-                "Ocean grid"
+                "Ocean grid: Sea ice is horizontally discretised on the ocean grid."
             ]
         }, 
         "cmip6.seaice.grid.discretisation.horizontal.grid_type": {
@@ -183,7 +178,7 @@
         }, 
         "cmip6.seaice.grid.discretisation.vertical.layering": {
             "values": [
-                "Multi-layers"
+                "Multi-layers: Simulation uses more than two layers."
             ]
         }, 
         "cmip6.seaice.grid.discretisation.vertical.number_of_layers": {
@@ -243,12 +238,12 @@
         }, 
         "cmip6.seaice.dynamics.horizontal_transport": {
             "values": [
-                "Incremental Re-mapping"
+                "Incremental Re-mapping: (including Semi-Lagrangian)"
             ]
         }, 
         "cmip6.seaice.dynamics.transport_in_thickness_space": {
             "values": [
-                "Incremental Re-mapping"
+                "Incremental Re-mapping: (including Semi-Lagrangian)"
             ]
         }, 
         "cmip6.seaice.dynamics.ice_strength_formulation": {
@@ -260,11 +255,6 @@
             "values": [
                 "Rafting", 
                 "Ridging"
-            ]
-        }, 
-        "cmip6.seaice.dynamics.rheology": {
-            "values": [
-                "Elastic-visco-plastic"
             ]
         }, 
         "cmip6.seaice.thermodynamics.name": {
@@ -279,7 +269,7 @@
         }, 
         "cmip6.seaice.thermodynamics.energy.enthalpy_formulation": {
             "values": [
-                "Other: document in cell to the right"
+                "Other: Mushy layer formulation - Pure ice latent and sensible heat and brine enthalpy with a time evolving liquid fraction"
             ]
         }, 
         "cmip6.seaice.thermodynamics.energy.thermal_conductivity": {
@@ -294,7 +284,7 @@
         }, 
         "cmip6.seaice.thermodynamics.energy.basal_heat_flux": {
             "values": [
-                "Thermal Varying Salinity"
+                "Thermal Varying Salinity: Thermal properties depend on S-T (with varying salinity."
             ]
         }, 
         "cmip6.seaice.thermodynamics.energy.heat_content_of_precipitation": {
@@ -407,11 +397,6 @@
                 "50% is lost to the ocean."
             ]
         }, 
-        "cmip6.seaice.thermodynamics.snow_processes.heat_diffusion": {
-            "values": [
-                "Multi-layered heat diffusion"
-            ]
-        }, 
         "cmip6.seaice.radiative_processes.name": {
             "values": [
                 "delta-Eddington shortwave"
@@ -423,11 +408,6 @@
             ]
         }, 
         "cmip6.seaice.radiative_processes.surface_albedo": {
-            "values": [
-                "Delta-Eddington"
-            ]
-        }, 
-        "cmip6.seaice.radiative_processes.ice_radiation_transmission": {
             "values": [
                 "Delta-Eddington"
             ]

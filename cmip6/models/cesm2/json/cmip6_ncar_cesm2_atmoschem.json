@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "atmoschem", 
     "content": {
@@ -123,11 +123,6 @@
         "cmip6.atmoschem.grid.resolution.number_of_vertical_levels": {
             "values": [
                 "Low top: 32, High top: 72"
-            ]
-        }, 
-        "cmip6.atmoschem.grid.resolution.is_adaptive_grid": {
-            "values": [
-                false
             ]
         }, 
         "cmip6.atmoschem.transport.name": {
@@ -266,11 +261,6 @@
                 true
             ]
         }, 
-        "cmip6.atmoschem.gas_phase_chemistry.wet_oxidation": {
-            "values": [
-                false
-            ]
-        }, 
         "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.name": {
             "values": [
                 "MOZART (extension to Kinnison et al., 2007; https://doi.org/10.1029/2006JD007879)"
@@ -304,11 +294,6 @@
                 true
             ]
         }, 
-        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.coagulation": {
-            "values": [
-                true
-            ]
-        }, 
         "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.overview": {
             "values": [
                 "Tropospheric heterogeneous chemistry is based on model derived tropospheric surface area density, which includes all aerosols but sea-salt and dust. Reaction probabilities depend on gamma values of different species."
@@ -338,11 +323,6 @@
                 true
             ]
         }, 
-        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.coagulation": {
-            "values": [
-                false
-            ]
-        }, 
         "cmip6.atmoschem.photo_chemistry.name": {
             "values": [
                 "Lookup table based on TUV"
@@ -361,11 +341,6 @@
         "cmip6.atmoschem.photo_chemistry.photolysis.method": {
             "values": [
                 "Offline (with clouds)"
-            ]
-        }, 
-        "cmip6.atmoschem.photo_chemistry.photolysis.environmental_conditions": {
-            "values": [
-                "Modeled temperature and pressure determine look-up table value; modeled ozone column above each grid box and clouds are taken into account."
             ]
         }
     }

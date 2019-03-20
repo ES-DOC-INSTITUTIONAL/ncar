@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "ncar", 
-    "seedingSource": null, 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cesm2", 
     "topic": "aerosol", 
     "content": {
@@ -162,11 +162,6 @@
                 "1 degree"
             ]
         }, 
-        "cmip6.aerosol.grid.resolution.is_adaptive_grid": {
-            "values": [
-                false
-            ]
-        }, 
         "cmip6.aerosol.transport.name": {
             "values": [
                 "Transport is handled in the atmosphere model CAM6."
@@ -183,11 +178,6 @@
             ]
         }, 
         "cmip6.aerosol.transport.mass_conservation_scheme": {
-            "values": [
-                "Uses atmospheric chemistry transport scheme"
-            ]
-        }, 
-        "cmip6.aerosol.transport.convention": {
             "values": [
                 "Uses atmospheric chemistry transport scheme"
             ]
@@ -320,11 +310,6 @@
                 true
             ]
         }, 
-        "cmip6.aerosol.optical_radiative_properties.cloud_interactions.longwave_bands": {
-            "values": [
-                16
-            ]
-        }, 
         "cmip6.aerosol.model.name": {
             "values": [
                 "Modal Aerosol Model (MAM4)"
@@ -372,11 +357,6 @@
         "cmip6.aerosol.model.scheme_type": {
             "values": [
                 "Modal"
-            ]
-        }, 
-        "cmip6.aerosol.model.bulk_scheme_species": {
-            "values": [
-                "Other: document in cell to the right"
             ]
         }
     }
