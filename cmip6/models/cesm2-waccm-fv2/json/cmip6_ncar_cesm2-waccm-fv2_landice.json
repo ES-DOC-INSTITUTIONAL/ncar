@@ -1,0 +1,8 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "ncar", 
+    "seedingSource": "Spreadsheet", 
+    "sourceID": "cesm2-waccm-fv2", 
+    "topic": "landice", 
+    "content": {}
+}
