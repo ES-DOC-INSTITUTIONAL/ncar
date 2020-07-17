@@ -5,6 +5,96 @@
     "sourceID": "cesm2", 
     "topic": "atmoschem", 
     "content": {
+        "cmip6.atmoschem.key_properties.name": {
+            "values": [
+                "MOZART chemical mechanism"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.keywords": {
+            "values": [
+                "troposphere, stratosphere, mesosphere, lower thermosphere"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.overview": {
+            "values": [
+                "The MOZART chemical mechanism included in CESM2/WACCM covers the troposphere, stratosphere, mesosphere and lower thermosphere.  The MOZART family of mechanisms have been used in the MOZART chemical transport models and CAM-chem and WACCM, as well as WRF-Chem, for many years.  "
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.chemistry_scheme_scope": {
+            "values": [
+                "Whole atmosphere"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.basic_approximations": {
+            "values": [
+                "Several compounds represent lumped species (i.e., BIGALK, BIGENE, MTERP)"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.prognostic_variables_form": {
+            "values": [
+                "3D mass/mixing ratio for gas"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.number_of_tracers": {
+            "values": [
+                232
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.family_approach": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.coupling_with_chemical_reactivity": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.method": {
+            "values": [
+                "Operator splitting"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.split_operator_advection_timestep": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.split_operator_physical_timestep": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.split_operator_chemistry_timestep": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.split_operator_alternate_order": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.integrated_timestep": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.timestep_framework.integrated_scheme_type": {
+            "values": [
+                "Implicit"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.tuning_applied.description": {
+            "values": [
+                "No tuning is applied to atmospheric chemistry."
+            ]
+        }, 
         "cmip6.atmoschem.grid.name": {
             "values": [
                 "Cartesian latitude longitude "
@@ -33,6 +123,224 @@
         "cmip6.atmoschem.grid.resolution.number_of_vertical_levels": {
             "values": [
                 "Low top: 32, High top: 72"
+            ]
+        }, 
+        "cmip6.atmoschem.transport.name": {
+            "values": [
+                "Transport is handled in the atmosphere model CAM6."
+            ]
+        }, 
+        "cmip6.atmoschem.transport.overview": {
+            "values": [
+                "Transport includes advection (using the CAM6 finite volume dynamical core), diffusion and convective transport."
+            ]
+        }, 
+        "cmip6.atmoschem.transport.use_atmospheric_transport": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.name": {
+            "values": [
+                "CMIP6"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.overview": {
+            "values": [
+                "The anthropogenic and biomass burning emissions are those specified for CMIP6.  Biogenic emissions are calculated online using the MEGANv2.1 algorithms included in CLM.  Soil NO, ocean, and other miscellaneous emissions are specified from the POET inventory.  The sulfur emissions from continuously outgassing emissions are from [Dentener et al., 2006].  "
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.surface_emissions.sources": {
+            "values": [
+                "Anthropogenic", 
+                "Biomass burning", 
+                "Vegetation", 
+                "Soil", 
+                "Sea surface"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.surface_emissions.method": {
+            "values": [
+                "Climatology", 
+                "Interactive"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.surface_emissions.prescribed_climatology_emitted_species": {
+            "values": [
+                "monthly: NO, NO2, CO, C2H2, C2H6, C2H4, C3H8, C3H6, BIGALK, BIGENE, BENZENE, TOLUENE, XYLENES, CH3OH, C2H5OH, CH2O, CH3CHO, CH3COCH3, MEK, HCOOH, CH3COOH, HCN, CH3CN, GLYALD, DMS"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.surface_emissions.interactive_emitted_species": {
+            "values": [
+                "ISOP, MTERP, BCARY, CH3OH, C2H5OH, CH2O, CH3CHO, CH3COOH, CH3COCH3, HCOOH, HCN, CO, C2H6, C2H4, C3H8, C3H6, BIGALK, BIGENE, TOLUENE"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.atmospheric_emissions.sources": {
+            "values": [
+                "Volcanos", 
+                "Lightning", 
+                "Aircraft"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.atmospheric_emissions.method": {
+            "values": [
+                "Climatology", 
+                "Interactive"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.atmospheric_emissions.prescribed_climatology_emitted_species": {
+            "values": [
+                "NO2 (monthly), SO2 (monthly), SO2-volcanoes (constant)"
+            ]
+        }, 
+        "cmip6.atmoschem.emissions_concentrations.concentrations.prescribed_lower_boundary": {
+            "values": [
+                "CCL4, CF2CLBR, CF3BR, CFC11, CFC113, CFC12, CH3BR, CH3CCL3, CH3CL, CH4, CO2, H2, HCFC22, N2O, CFC114, CFC115, HCFC141B, HCFC142B, CH2BR2, CHBR3, H2402, OCS, SF6"
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.name": {
+            "values": [
+                "MOZART TSMLT1 (for WACCM)"
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.overview": {
+            "values": [
+                "The WACCM configuration of CESM2 uses the MOZART TSMLT1 (Troposphere-Stratosphere-Mesosphere-Lower Thermosphere, version 1) chemical mechanism, fully described in Emmons et al. (to be submitted to JAMES). This includes a comprehensive representation of tropospheric chemistry, including specific alkanes and alkenes smaller than C4, lumped alkanes and alkenes larger than C4, 3 specific aromatic species, isoprene and detailed isoprene oxidation, lumped monoterpenes and sesquiterpenes and a lumped representation of their oxidation products, as well as numerous primary and secondary oxygenated VOCs (formaldehyde, acetaldehyde, acetone, methanol, ethanol, etc.).  Secondary organic aerosols are created using a VBS (volatility basis set) scheme initiated by oxidation of isoprene, monoterpenes, benzene, toluene and xylenes (Tilmes et al., in preparation for JAMES).  The chemistry of the stratosphere, mesosphere and lower thermosphere is also represented in detail, similarly to previous versions of WACCM.  The stratospheric chemistry includes detailed representation of gas-phase and heterogeneous chemistry including halogens and polar stratospheric cloud processes.  The CAM configuration of CESM2 uses very simple gas-phase chemistry with prescribed oxidants (OH, HO2, O3, NO3) and solution species SO2, H2SO4, H2O2."
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.species": {
+            "values": [
+                "HOx", 
+                "Ox", 
+                "NOy", 
+                "HSOx", 
+                "Cly", 
+                "Bry", 
+                "VOCs", 
+                "Isoprene", 
+                "H2O"
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_bimolecular_reactions": {
+            "values": [
+                352
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_termolecular_reactions": {
+            "values": [
+                31
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_tropospheric_heterogenous_reactions": {
+            "values": [
+                14
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_stratospheric_heterogenous_reactions": {
+            "values": [
+                17
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_advected_species": {
+            "values": [
+                232
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.number_of_steady_state_species": {
+            "values": [
+                0
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.interactive_dry_deposition": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmoschem.gas_phase_chemistry.wet_deposition": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.name": {
+            "values": [
+                "MOZART (extension to Kinnison et al., 2007; https://doi.org/10.1029/2006JD007879)"
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.overview": {
+            "values": [
+                "In the high top version of CESM2 (WACCM), the model contains all processes relevant to stratospheric chemistry, with a special emphasis on the capability to explicitly simulate ozone depletion. It also simulates the evolution of stratospheric aerosols, incuding volcanic eruptions.  This follows Mills et al. (2016, https://doi.org/10.1002/2015JD024290 ). "
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.aerosol_species": {
+            "values": [
+                "HOx", 
+                "Ox", 
+                "NOy", 
+                "HSOx", 
+                "Cly", 
+                "Bry", 
+                "VOCs", 
+                "Isoprene", 
+                "H2O"
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.number_of_steady_state_species": {
+            "values": [
+                0
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.sedimentation": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.overview": {
+            "values": [
+                "Tropospheric heterogeneous chemistry is based on model derived tropospheric surface area density, which includes all aerosols but sea-salt and dust. Reaction probabilities depend on gamma values of different species."
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.gas_phase_species": {
+            "values": [
+                "Low Top: HO2, H2O2, SO2, OH, H2O, H2SO4, DMS, NO3, HNO3; High Top: DMS, NO3, SO2, OH, GLYOXAL, HO2,HONITR, ISOPNITA, ISOPNITB, N2O5, NC4CH3OH,NC4CHO,NO2,NO3,NTERPOOH,ONITR, TERPNIT, HNO3, H2O2,NO"
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.aerosol_species": {
+            "values": [
+                "Sulphate", 
+                "Organic", 
+                "Black carbon/soot", 
+                "Secondary organic aerosols", 
+                "Particulate organic matter"
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.number_of_steady_state_species": {
+            "values": [
+                0
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.interactive_dry_deposition": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.name": {
+            "values": [
+                "Lookup table based on TUV"
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.overview": {
+            "values": [
+                "Photolysis rates are derived from a lookup table created from the Tropospheric Ultraviolet and Visible Radiation (TUV) model, as described in [Lamarque, J.F. et al., Geosci. Model Dev., 5, 369\u2013411, 2012]. The photolysis calculation uses a look-up table between 200 and 750 nm and online calculations for wavelengths < 200 nm. Changes in the ozone column, but not in the aerosol burden, impact photolysis rates. The impact of clouds on photolysis rates is parameterized following [Madronich, S., J. Geophys. Res., 92, 9740\u20139752, 1987].  "
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.number_of_reactions": {
+            "values": [
+                140
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.photolysis.method": {
+            "values": [
+                "Offline (with clouds)"
             ]
         }
     }

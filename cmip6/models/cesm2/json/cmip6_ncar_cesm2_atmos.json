@@ -5,6 +5,96 @@
     "sourceID": "cesm2", 
     "topic": "atmos", 
     "content": {
+        "cmip6.atmos.key_properties.name": {
+            "values": [
+                "Community Atmospheric Model version 6 (CAM6)"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.keywords": {
+            "values": [
+                "Advection, transport, turbulence, clouds, convection, radiation, microphysics, gravity waves, drag, diffusion"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.overview": {
+            "values": [
+                "The Community Atmosphere Model version 6 (CAM6) is released as the active atmosphere component of the Community Earth System Model version CESM-2.0. It is the latest in a series of global atmosphere models whose development is guided by the Atmosphere Model Working Group (AMWG) of the Community Earth System Model (CESM) project. \n\nCAM6 contains substantial modifications of every atmospheric physics parameterization except for radiative transfer. The Cloud Layers Unified by Binormals (CLUBB) scheme has replaced earlier schemes for boundary layer turbulence, shallow convection and cloud macrophysics. CLUBB is a prognostic moist turbulence scheme that calculates joint higher-order moments of subgrid vertical velocity, water content and liquid water potential temperature. Equations for these moments are closed using assumed joint binormal probability density functions (PDFs) for these quantities. In addition to calculating subgrid vertical fluxes, CLUBB\u2019s PDF closure is also used to calculate large-scale condensation and cloud fraction. An improved two-moment prognostic cloud microphysics (MG2) has also been introduced. The major innovation in MG2 is to carry prognostic precipitation species \u2013 rain and snow \u2013 in addition to cloud condensates. MG2 interacts with the MAM4 aerosol microphysics scheme to calculate condensate mass fractions and number concentrations. Deep convection has been significantly retuned to increase the sensitivity to convective inhibition. Both schemes to calculate subgrid orographic drag have been substantially modified. Topographic orientation (ridges) and low-level flow blocking effects have been incorporated into the orographic gravity wave scheme. The previous parameterization of boundary layer form drag \u2013 turbulent mountain stress (TMS) \u2013 has been replaced with the scheme of Beljaars et al. currently used in the European Center forecast model. In addition to these physics updates, new infrastructure for traceable generation of topographic forcing files has been developed.\n"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.model_family": {
+            "values": [
+                "AGCM: Atmospheric General Circulation Model"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.basic_approximations": {
+            "values": [
+                "Hydrostatic"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.horizontal_resolution_name": {
+            "values": [
+                "F09"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "0.9 x 1.25 degrees lat-lon"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.range_horizontal_resolution": {
+            "values": [
+                "Uniform in latitude, pole convergent toward poles"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                32
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.high_top": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                15
+            ]
+        }, 
+        "cmip6.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                30
+            ]
+        }, 
+        "cmip6.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                30
+            ]
+        }, 
+        "cmip6.atmos.key_properties.orography.type": {
+            "values": [
+                "Fixed"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.orography.time-varying": {
+            "values": [
+                "None"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.description": {
+            "values": [
+                "The first key measure of a simulation that will be appropriate to the fully coupled simulation is the TOA energy balance. The pre-industrial equilibrium energy imbalance is adjusted to be under 0.1\u20130.2 W m\u22122 through modification of cloud-related fields that have an impact both on the shortwave and longwave components of the energy budget. \n\nThe first quantitative assessment of simulation fidelity is given by summary RMSE and bias scores for a number of variables key to the fully coupled system, including surface stresses, precipitation, temperature, cloud forcings, and surface pressure. \n\nA secondary assessment involves \u201cpreindustrial minus present day\u201d simulations to determine the aerosol indirect effects that would be expected in historical coupled simulations. This involves ensuring that the net aerosol forcing is not greater in magnitude than about -1.5 W m\u22122 , based on guidance from Myhre et al. (2013)."
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.global_mean_metrics_used": {
+            "values": [
+                "The pre-industrial equilibrium energy imbalance < 0.1\u20130.2 W m\u22122, \n\nTaylor diagram (summary of RMSE and bias scores) for 10 variables\nSea level pressure\nShortwave cloud forcing\nLongwave cloud forcing\nTropical land rainfall (30N - 30S)\nTropical ocean rainfall (30N - 30S)\nSurface air temperature (at 2m) over land\nEquatorial Pacific zonal surface stress (5S - 5N)\nZonal wind at 300 mb\nRelative humidity\nTemperature.\n\nNet aerosol forcing > -1.5 W m\u22122 \n\n"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "ITCZ, stratocumulus short wave cloud forcing, southern ocean stratocumulus, tropical precipitable water, "
+            ]
+        }, 
         "cmip6.atmos.grid.name": {
             "values": [
                 "Cartesian latitude longitude "
@@ -38,6 +128,561 @@
         "cmip6.atmos.grid.discretisation.horizontal.grid_type": {
             "values": [
                 "Latitude-Longitude"
+            ]
+        }, 
+        "cmip6.atmos.radiation.name": {
+            "values": [
+                "Rapid Radiation Transfer Model for GCMs (RRTMG) "
+            ]
+        }, 
+        "cmip6.atmos.radiation.overview": {
+            "values": [
+                "Radiative transfer calculations in the longwave and shortwave are provided by the radiation code RRTMG (Iacono et al. 2008; Mlawer et al. 1997). This is an accelerated and modified version of the correlated k-distribution model, RRTM. The condensed phase radiative parameterizations are external to the radiation package, however the gas optics and radiative transfer solver are provided within RRTMG.\n"
+            ]
+        }, 
+        "cmip6.atmos.radiation.aerosols": {
+            "values": [
+                "Sulphate", 
+                "POM: particulate organic matter", 
+                "SOA: secondary organic aerosols", 
+                "BC: black carbon / soot", 
+                "Dust", 
+                "Sea salt"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "RRTMG "
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.spectral_integration": {
+            "values": [
+                "Correlated-k"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "Two-stream"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.spectral_intervals": {
+            "values": [
+                14
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "Emission/absorption,"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "O3", 
+                "H2O", 
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "O3", 
+                "Other: O2", 
+                "Other: N2"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_GHG.ODS": {
+            "values": [
+                "CFC-12: CFC", 
+                "CFC-11: CFC"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_GHG.other_flourinated_gases": {
+            "values": [
+                "Other: Available in CAM-CHEM version"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "Ice water path", 
+                "Effective crystal radius", 
+                "Crystal asymmetry"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_ice.optical_methods": {
+            "values": [
+                "Geometric optics"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "Effective cloud droplet radii", 
+                "Droplet size distribution", 
+                "Liquid water path"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Geometric optics"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Monte Carlo Independent Column Approximation: McICA"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_aerosols.physical_representation": {
+            "values": [
+                "Effective radii", 
+                "Size distribution"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_aerosols.optical_methods": {
+            "values": [
+                "Geometric optics"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "Rapid Radiative Transfer Scheme for GCMs (RRTMG)\n\n"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.spectral_integration": {
+            "values": [
+                "Correlated-k"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.transport_calculation": {
+            "values": [
+                "Multi-stream"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.spectral_intervals": {
+            "values": [
+                16
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "Emission/absorption,"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "H2O", 
+                "O3", 
+                "N2O: Nitrous Oxide", 
+                "CH4: Methane", 
+                "CFC-11 eq: Summarize the effect of non CO2, CH4, N2O and CFC-12 gases with an equivalence concentration of CFC-11", 
+                "CFC-12 eq: Summarize the radiative effect of the Ozone Depleating Substances, ODSs, with a CFC-12 equivalence concentration", 
+                "Other: O2", 
+                "Other: N2"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_GHG.ODS": {
+            "values": [
+                "CFC-11: CFC", 
+                "CFC-12: CFC"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_GHG.other_flourinated_gases": {
+            "values": [
+                "Other: Available in CAM-CHEM version"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "Ice water path", 
+                "Effective crystal radius"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_ice.optical_methods": {
+            "values": [
+                "Geometric optics"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "Liquid water path", 
+                "Droplet size distribution"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Geometric optics"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Monte Carlo Independent Column Approximation: McICA"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_aerosols.physical_representation": {
+            "values": [
+                "Effective radii", 
+                "Asymmetry", 
+                "Size distribution"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.name": {
+            "values": [
+                "Cloud Layers Unified By Binormals (CLUBB), Zhang and McFarlane deep convection"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.overview": {
+            "values": [
+                "Boundary layer turbulence, shalllow convection and grid-scale cloudiness have a unified treament using the Cloud Layers Unified By Binormals CLUBB scheme (Golaz et al. 2002). CLUBB is high order turbulence with close based on the joint distribution of vertical velocity, temperature and moisture. Deep convection is represented by a bulk plume mass flux method determined by a Convectively Available Potential Energy (CAPE) closure in the Zhang and McFarlane (1995) scheme."
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
+            "values": [
+                "Other: Cloud Layers Unified By Binormals (CLUBB)"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
+            "values": [
+                "TKE prognostic", 
+                "TKE coupled with water", 
+                "Vertical profile of Kz", 
+                "Non-local diffusion"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.closure_order": {
+            "values": [
+                3
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.counter_gradient": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.scheme_name": {
+            "values": [
+                "Zhang and McFarlane (1995) "
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "Mass-flux", 
+                "Plume ensemble"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "CAPE: Mass flux determined by CAPE, convectively available potential energy.", 
+                "Bulk"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.processes": {
+            "values": [
+                "Entrainment", 
+                "Detrainment", 
+                "Updrafts", 
+                "Downdrafts", 
+                "Penetrative convection", 
+                "Re-evaporation of convective precipitation", 
+                "Penetrative convection"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "Tuning parameter based"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "Cloud Layers Unified By Binormals (CLUBB)"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "Other: Turbulence based"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_method": {
+            "values": [
+                "Included in boundary layer turbulence"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.processes": {
+            "values": [
+                "Convective momentum transport", 
+                "Entrainment", 
+                "Detrainment"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.name": {
+            "values": [
+                "Morrison Gettelman Microphysics scheme version 2 (MG2)"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "The scheme is based upon the 2-moment (mass and number concentration) microphysics parameterization of Gettelman and Morrison (2015). The scheme adds to the 2-moment microphysics scheme of Morrison and Getteleman (2008) with prognostic precipitation (snow and rain) species"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.large_scale_precipitation.scheme_name": {
+            "values": [
+                "Rain following Khrouditnov and Kogan (2000) modified for sub-grid distribution of cloud water. Snow following Ferrier (1994)"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "Liquid rain", 
+                "Snow"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
+            "values": [
+                "Morrison-Gettelman Microphysics scheme version 2 (MG2)"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.name": {
+            "values": [
+                "Cloud Layers Unified by Binormals (CLUBB)"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.overview": {
+            "values": [
+                "Liquid clouds are determined as the condensed fraction of a grid box as calculated from CLUBB and represented by a PDF of cloud liquid. "
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "Diagnostic"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.uses_separate_treatment": {
+            "values": [
+                "CLUBB is used to determine stratiform, boundary layer and shallow convective cloud. Zhang McFarlane scheme is used for deep convective cloud."
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.processes": {
+            "values": [
+                "Entrainment", 
+                "Detrainment", 
+                "Other: Turbulence"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "Atmosphere_radiation", 
+                "Atmosphere_microphysics_precipitation", 
+                "Atmosphere_turbulence_convection"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
+            "values": [
+                "Maximum-random"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.optical_cloud_properties.cloud_inhomogeneity": {
+            "values": [
+                "Predicted PDFs"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.type": {
+            "values": [
+                "Diagnostic"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.function_name": {
+            "values": [
+                "Double Gaussian PDF"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.function_order": {
+            "values": [
+                2
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.convection_coupling": {
+            "values": [
+                "Coupled with shallow"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.type": {
+            "values": [
+                "Diagnostic"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.function_name": {
+            "values": [
+                "None"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.function_order": {
+            "values": [
+                0
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.isscp_attributes.top_height_estimation_method": {
+            "values": [
+                "Other: Adjust top height using both a computed infrared brightness temperature and the visible optical depth to adjust cloud top pressure. Note that this calculation is most appropriate to compare to ISCCP data during sunlit hours."
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.isscp_attributes.top_height_direction": {
+            "values": [
+                "Highest altitude level"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.cosp_attributes.run_configuration": {
+            "values": [
+                "Inline"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.cosp_attributes.number_of_grid_points": {
+            "values": [
+                55296
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.cosp_attributes.number_of_sub_columns": {
+            "values": [
+                50
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.cosp_attributes.number_of_levels": {
+            "values": [
+                40
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.radar_inputs.frequency": {
+            "values": [
+                "94.0 GHz"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.radar_inputs.type": {
+            "values": [
+                "Space borne"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.radar_inputs.gas_absorption": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.radar_inputs.effective_radius": {
+            "values": [
+                true
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.lidar_inputs.ice_types": {
+            "values": [
+                "Ice spheres"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.name": {
+            "values": [
+                "Anisotropic Orographic Gravity Wave Drag "
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.overview": {
+            "values": [
+                "Orographic gravity wave drag with ridge orientation and critical Froude number dependencies (following Scinocca and McFarlane 2000) for determining flow over and around obstacles. Forcing files for the scheme are generated using a ridge detection algorithm that produces realistic obstacle heights as well as other observationally-based topographic parameters. Non-orographic gravity wave sources are included in WACCM (high-top atmosphere version of CESM). These sources are deep convection and frontal adjustment dynamics.  For all sources, wave propagation is calculated as in Lindzen (1981) - 2D hydrostatic, single-mode theory subject to saturation."
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.sponge_layer": {
+            "values": [
+                "Diffusive sponge layer"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.background": {
+            "values": [
+                "Other: no \"background\" waves"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.subgrid_scale_orography": {
+            "values": [
+                "Effect on drag"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.name": {
+            "values": [
+                "Anisotropic Orographic Gravity Wave Drag "
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "Low level flow blocking", 
+                "Linear mountain waves"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.calculation_method": {
+            "values": [
+                "More than two cardinal directions"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.propagation_scheme": {
+            "values": [
+                "Linear theory"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.dissipation_scheme": {
+            "values": [
+                "Wave saturation vs Richardson number"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.name": {
+            "values": [
+                "Frontal and convective gravity wave scheme (Richter et al., 2010)"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "Convection", 
+                "Other: Frontal"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.calculation_method": {
+            "values": [
+                "Spatially dependent"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.propagation_scheme": {
+            "values": [
+                "Linear theory"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.name": {
+            "values": [
+                "Volcanic and Solar Forcings"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.overview": {
+            "values": [
+                "Solar forcings are taken from a spectral solar irradiance observartional based, time varying dataset. Time varying volcanic species are prescribed in the stratosphere and prognosed in the troposphere. In the high top WACCM version of the model stratospheric aerosol burdens are prognosed."
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.solar_constant.type": {
+            "values": [
+                "Transient"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.solar_constant.transient_characteristics": {
+            "values": [
+                "CMIP6 historic reconstructed spectral solar irradiance (Matthews et al., 2016: GMD)"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.orbital_parameters.type": {
+            "values": [
+                "Transient"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.orbital_parameters.transient_method": {
+            "values": [
+                "Obliquity, eccentricity and vernal equinox longitude"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.insolation_ozone.solar_ozone_impact": {
+            "values": [
+                false
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.volcanoes_treatment.volcanoes_characteristics": {
+            "values": [
+                "Below the stratosphere volcanic forcing is represented from emissions of minor 'background' volcanoes where burdens are predicted. In the stratopshere volcanic forcing is due to prescribed burdens of sulfate species taken from a high top WACCM version of the model that prognoses burdens from prescribed emissions. "
             ]
         }
     }
