@@ -1,0 +1,8 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "ncar", 
+    "seedingSource": "Spreadsheet", 
+    "sourceID": "cesm1-cam5-se-lr", 
+    "topic": "aerosol", 
+    "content": {}
+}
